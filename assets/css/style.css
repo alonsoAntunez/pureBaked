@@ -1,0 +1,543 @@
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    scroll-behavior: smooth;
+}
+
+.noScroll {
+    overflow-y: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+label {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+ul {
+    list-style: inside;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+body {}
+
+a.underlineHover:hover {
+    text-decoration: none;
+}
+
+a.underlineHover {
+    display: inline-block;
+    position: relative;
+}
+
+a.underlineHover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    transform-origin: bottom right;
+    transition: transform 300ms ease-out;
+}
+
+a.underlineHover:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.navRow {
+    background: rgba(255, 255, 255, 1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logoContainer a img {
+    max-width: 120px;
+    width: 100%;
+}
+
+.menuContainer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.menuContainer ul li a {
+    color: rgba(74, 72, 88, 1);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.videoMainContainer {
+    position: relative;
+    margin-top: -7.59rem;
+    height: 100vh;
+}
+
+.videoMainContainer .videoRow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, 1);
+}
+
+.videoMainContainer .videoRow::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    left: 0;
+    background-color: rgba(152, 100, 0, 0.25);
+}
+
+.videoMainContainer .videoRow video {
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.contentVideo {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.contentVideo img {
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 1);
+    padding: 2rem;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-blend-mode: difference;
+}
+
+.contentVideo h1 {
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.contentVideo p {
+    color: rgba(255, 255, 255, 1);
+}
+
+/*Mobile Menu*/
+.modalMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(199, 139, 0, 0.25);
+    z-index: 1000;
+    display: none;
+}
+
+.modalMenu .innerMobileMenu {
+    width: 300px;
+    height: 100vh;
+    background: rgba(247, 180, 0, 1);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.modalMenu .innerMobileMenu .closeMenu {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    padding-right: 15px;
+}
+
+.closeMenu a {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 1)
+}
+
+.closeMenu a span {
+    font-size: 2rem;
+}
+
+.modalMenu .innerMobileMenu {
+    position: relative;
+    left: -300px;
+}
+
+.modalMenu .innerMobileMenu ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.modalMenu .innerMobileMenu ul li {
+    margin-bottom: 10px;
+}
+
+.modalMenu .innerMobileMenu ul li a {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.8rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.modalMenu .innerMobileMenu ul li a.underlineHover:after {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.footerContainer {
+    background: rgba(47, 72, 88, 1);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+.footerLogo img {
+    max-width: 250px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.footerLogo a {
+    color: rgba(247, 180, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.footerLogo a:hover {
+    text-decoration: none;
+}
+
+.footerLogo a span {
+    font-size: 1rem;
+    transform: rotateZ(40deg);
+    position: relative;
+    top: -2px;
+}
+
+.menuFooter {
+    text-align: center;
+}
+
+.menuFooter ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.menuFooter ul li {
+    margin-bottom: 10px;
+}
+
+.menuFooter ul li:last-child {
+    margin-bottom: 0;
+}
+
+.menuFooter ul li a {
+    color: rgba(255, 255, 255, 1);
+    font-size: 2rem;
+}
+
+.menuFooter ul li a.underlineHover:after {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.newsletterFooter h2 {
+    color: rgba(255, 255, 255, 1);
+}
+
+.newsletterFooter form input {
+    margin-bottom: 1rem;
+    background: rgba(247, 180, 0, 1);
+    color: rgba(57, 62, 70, 1);
+    border: none
+}
+
+.newsletterFooter form input::-webkit-input-placeholder {
+    color: rgba(57, 62, 70, 1);
+}
+
+.newsletterFooter form input:focus {
+    background: rgba(247, 180, 0, 1);
+    color: rgba(57, 62, 70, 1);
+}
+
+.newsletterFooter .socialLinks ul {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.newsletterFooter .socialLinks ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.newsletterFooter .socialLinks ul li a {
+    color: rgba(247, 180, 0, 1)
+}
+
+.newsletterFooter .socialLinks ul li a i {
+    font-size: 1.5rem;
+}
+
+/*Content styles*/
+
+.staticRow {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.staticRow .staticImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.staticRow .staticImageContainer img {
+    max-width: 450px;
+    width: 100%;
+}
+
+.whiteBack {
+    background: rgba(255, 255, 255, 1);
+}
+
+.greenBack {
+    background: rgba(255, 255, 255, 1);
+}
+
+.carouselRow {
+    height: 650px;
+}
+
+.slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide1 {
+    height: 650px;
+    background: url(../img/cakes/1/cake5.jpg) top center no-repeat;
+    background-size: cover;
+    color: rgba(46, 58, 69, 1);
+}
+
+.slide2 {
+    height: 650px;
+    background: url(../img/cakes/baking4.jpg) top center no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 1)
+}
+
+.slide3 {
+    height: 650px;
+    background: url(../img/cakes/2/cake7.jpg) top center no-repeat;
+    background-size: cover;
+    color: rgba(196, 19, 73, 1);
+    background-position-y: -150px;
+}
+
+.slide button {
+    padding: 1rem 20px 0.5rem 20px;
+    border: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.slide1 button {
+    background: rgba(47, 72, 88, 1);
+    color: rgba(255, 255, 255, 1)
+}
+
+.slide2 button {
+    background: rgba(147, 177, 40, 1);
+    color: rgba(255, 255, 255, 1)
+}
+
+.slide3 button {
+    background: rgba(247, 180, 0, 1);
+    color: rgba(255, 255, 255, 1)
+}
+
+.slick-prev {
+    left: 15px;
+    z-index: 10;
+}
+
+.slick-prev:before {
+    font-family: "FontAwesome";
+    content: "\f053";
+    font-weight: 400;
+    font-size: 2rem;
+    color: rgba(247, 180, 0, 1);
+    opacity: 1;
+}
+
+.slick-next {
+    right: 15px;
+    z-index: 10;
+}
+
+.slick-next::before {
+    font-family: "FontAwesome";
+    content: "\f054";
+    font-weight: 400;
+    font-size: 2rem;
+    color: rgba(247, 180, 0, 1);
+    opacity: 1;
+}
+
+/*Cakes Page*/
+.cakescontainer {
+    margin-top: 3rem;
+}
+
+.cakeGallery {
+    margin-bottom: 2rem;
+}
+
+.cakeGallery .galleryItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cakeGallery .galleryItem img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.cakesFlavors .flavourImage {
+    margin-bottom: 1rem;
+}
+
+.cakesFlavors .flavourImage a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(74, 72, 88, 1);
+}
+
+.cakesFlavors .flavourImage a:hover {
+    text-decoration: none;
+}
+
+.cakesFlavors .flavourImage a img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.cakesFlavors .flavourImage a span {
+    font-weight: 500;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+
+.cakescontainer hr {
+    overflow: visible;
+    margin-top: 2rem;
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+.cakescontainer hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+form.orderForm textarea {
+    width: 100%;
+    resize: none;
+}
+
+form.orderForm input[type=submit] {
+    background: rgba(147, 177, 40, 1);
+}

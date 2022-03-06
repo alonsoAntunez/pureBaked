@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="SHORTCUT ICON" href="assets/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/orderPanel.css" />
+    <link rel="stylesheet" href="assets/css/breakpoints.css" />
+    <title>Pure Baked - We're just baking</title>
+    <style>
+        .menuContainer ul {
+            justify-content: flex-end;
+        }
+
+        .menuContainer ul li {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <nav class="row navRow">
+        <div class="col-12 col-sm-12 col-md-12 col-kg-12 col-xl-12">
+            <div class="row menuContainer">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 logoContainer">
+                    <a href="index.html">
+                        <img class="" src="assets/img/pureBaked_Logo.svg" />
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <ul>
+                        <li><a href="pastelero.html" class="underlineHover">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Content-->
+    <div class="row align-items-center jusify-content-center ordersRow vh-100">
+        <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 mx-auto ordersContainer">
+            <div class="row ordersTitle">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h3>Order summary</h3>
+                </div>
+            </div>
+            <div class="row form-row ordersActions">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 form-group">
+                    <select class="form-control">
+                        <option selected disabled>Bulk Actions</option>
+                        <option>File Order</option>
+                        <option>Ask for meeting</option>
+                        <option>Send to Baking</option>
+                        <option>Send to Decoration</option>
+                        <option>Cancel Order</option>
+                        <option>Set as Finished</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2 form-group">
+                    <input class="form-control btn btn-success" type="submit" value="Execute">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Action</th>
+                                <th>Order id</th>
+                                <th>Order holder</th>
+                                <th>No. of servings</th>
+                                <th>Flavours</th>
+                                <th>Frostings</th>
+                                <th>Decoration</th>
+                                <th>Description</th>
+                                <th>Order status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pendingContact">
+                                <td class="align-middle text-center"><input type="checkbox"></td>
+                                <td class="align-middle">PB-87512</td>
+                                <td class="align-middle">Jane Smith</td>
+                                <td class="align-middle">40 - 80</td>
+                                <td class="align-middle">Chocolate</td>
+                                <td class="align-middle">Fondant</td>
+                                <td class="align-middle">Combined<br>Buttercream - Berries</td>
+                                <td class="align-middle"><a href="#descriptionModal" data-toggle="modal" data-target="#descriptionModal" role="link">Order description</a></td>
+                                <td class="align-middle">Pending contact</td>
+                            </tr>
+                            <tr class="table-primary active">
+                                <td class="align-middle text-center"><input type="checkbox"></td>
+                                <td class="align-middle">PB-87511</td>
+                                <td class="align-middle">John Doe</td>
+                                <td class="align-middle">160 - 240</td>
+                                <td class="align-middle">Red velvet</td>
+                                <td class="align-middle">Fondant</td>
+                                <td class="align-middle">Fondant Flowers</td>
+                                <td class="align-middle"><a href="#descriptionModal" data-toggle="modal" data-target="#descriptionModal" role="link">Order description</a></td>
+                                <td class="align-middle">Active</td>
+                            </tr>
+                            <tr class="table-success inProgress">
+                                <td class="align-middle text-center"><input type="checkbox"></td>
+                                <td class="align-middle">PB-87510</td>
+                                <td class="align-middle">Jack Sparrow</td>
+                                <td class="align-middle">80 - 160</td>
+                                <td class="align-middle">Carrot</td>
+                                <td class="align-middle">Combined<br>Buttercream - Fondant</td>
+                                <td class="align-middle">Combined<br>Fondant Flowers - Berries</td>
+                                <td class="align-middle"><a href="#descriptionModal" data-toggle="modal" data-target="#descriptionModal" role="link">Order description</a></td>
+                                <td class="align-middle">Baking - Decorating</td>
+                            </tr>
+                            <tr class="table-danger canceled">
+                                <td class="align-middle text-center"><input type="checkbox"></td>
+                                <td class="align-middle">PB-87510</td>
+                                <td class="align-middle">Ricardo Perez</td>
+                                <td class="align-middle">240+</td>
+                                <td class="align-middle">Marble</td>
+                                <td class="align-middle">Fondant</td>
+                                <td class="align-middle">Combined<br>Buttercream - Berries</td>
+                                <td class="align-middle"><a href="#descriptionModal" data-toggle="modal" data-target="#descriptionModal" role="link">Order description</a></td>
+                                <td class="align-middle">Canceled</td>
+                            </tr>
+                            <tr class="table-dark finished">
+                                <td class="align-middle text-center"><input type="checkbox"></td>
+                                <td class="align-middle">PB-87509</td>
+                                <td class="align-middle">Julian Moretti</td>
+                                <td class="align-middle">40 - 80</td>
+                                <td class="align-middle">Combined<br>Coconut - Lemon</td>
+                                <td class="align-middle">Buttercream</td>
+                                <td class="align-middle">Combined<br>Buttercream - Berries</td>
+                                <td class="align-middle"><a href="#descriptionModal" data-toggle="modal" data-target="#descriptionModal" role="link">Order description</a></td>
+                                <td class="align-middle">Finished</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Content-->
+    <div id="mobileNav" class="modalMenu d-md-none d-lg-none d-xl-none vh-100">
+        <div id="menuList" class="innerMobileMenu">
+            <div class="closeMenu">
+                <a href="#" onclick="hideMenu('mobileNav')"><span class="material-icons">close</span></a>
+            </div>
+            <ul>
+                <li><a href="pastel.html" class="underlineHover">Cakes</a></li>
+                <li><a href="cookies.html" class="underlineHover">Cookies</a></li>
+                <li><a href="contact.html" class="underlineHover">Contact</a></li>
+                <li><a href="pastelero.html" class="underlineHover">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Content-->
+    <div class="modal fade" id="descriptionModal" tabindex="-1" role="dialog" aria-labelledby="descriptionModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order description</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat et arcu in cursus. Donec vel
+                                est volutpat, pellentesque velit vitae, commodo nulla. Interdum et malesuada fames ac ante ipsum primis
+                                in faucibus. Phasellus bibendum diam sed hendrerit
+                                vestibulum. Sed quis placerat lorem. Donec consectetur erat in elit fringilla lacinia. Nulla tincidunt neque
+                                orci, quis molestie tortor placerat ut. Donec mauris nisl, finibus vitae leo sit amet, ultrices convallis diam.
+                                Vestibulum tempus sapien id augue tristique dictum. Vivamus vel pulvinar sapien.</p>
+                        </div>
+                    </div>
+                    <div class="row descriptionImagesTitle">
+                        <div class="col-12 dcol-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <h5 class="modal-title">Description Images</h5>
+                        </div>
+                    </div>
+                    <div class="row descriptionImages">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <img src="assets/img/cakes/2/cake1.jpg">
+                            <img src="assets/img/cakes/2/cake4.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/functions.js"></script>
+</body>
+
+</html>

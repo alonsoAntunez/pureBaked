@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="SHORTCUT ICON" href="assets/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/orderPanel.css" />
+    <link rel="stylesheet" href="assets/css/breakpoints.css" />
+    <title>Pure Baked - We're just baking</title>
+</head>
+
+<body class="container-fluid">
+    <nav class="row navRow">
+        <div class="col-12 col-sm-12 col-md-12 col-kg-12 col-xl-12">
+            <div class="row menuContainer">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 logoContainer">
+                    <a href="index.html">
+                        <img class="" src="assets/img/pureBaked_Logo.svg" />
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <ul>
+                        <li class="d-block d-sm-block d-md-none"><a href="#" onclick="showMenu('mobileNav')"><span class="material-icons">menu</span></a></li>
+                        <li class="d-none d-sm-none d-md-block"><a href="pastel.html" class="underlineHover">Cakes</a></li>
+                        <li class="d-none d-sm-none d-md-block"><a href="cookies.html" class="underlineHover">Cookies</a></li>
+                        <li class="d-none d-sm-none d-md-block"><a href="contact.html" class="underlineHover">Contact</a></li>
+                        <li class="d-none d-sm-none d-md-block"><a href="pastelero.html" class="underlineHover">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Content-->
+    <div class="row align-items-center jusify-content-center loginRow vh-100">
+        <div class="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-4 mx-auto loginContainer">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 loginImage">
+                    <img src="assets/img/pureBaked_Logo.svg">
+                </div>
+            </div>
+            <div class="row form-row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+                    <input id="panelUser" class="form-control" type="text" name="panelUser" value="" placeholder="Username" required>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+                    <input id="panelPass" class="form-control" type="password" name="panelPass" value="" placeholder="Password" required>
+                </div>
+            </div>
+            <div class="row form-row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+                    <button class="w-100" onclick="location.href = 'panel.html';">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Content-->
+    <div id="mobileNav" class="modalMenu d-md-none d-lg-none d-xl-none vh-100">
+        <div id="menuList" class="innerMobileMenu">
+            <div class="closeMenu">
+                <a href="#" onclick="hideMenu('mobileNav')"><span class="material-icons">close</span></a>
+            </div>
+            <ul>
+                <li><a href="pastel.html" class="underlineHover">Cakes</a></li>
+                <li><a href="cookies.html" class="underlineHover">Cookies</a></li>
+                <li><a href="contact.html" class="underlineHover">Contact</a></li>
+                <li><a href="pastelero.html" class="underlineHover">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/functions.js"></script>
+</body>
+
+</html>

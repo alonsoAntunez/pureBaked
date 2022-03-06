@@ -1,0 +1,104 @@
+/* Extra small devices (portrait phones, less than 576px)*/
+/* No media query since this is the default in Bootstrap*/
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/*Reverse breakpoints*/
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    ul {
+        list-style: inside;
+        margin-bottom: 1rem;
+    }
+
+    ul li {
+        font-size: 20px;
+    }
+
+    .menuContainer ul {
+        justify-content: flex-end;
+    }
+
+    .staticRow .staticImageContainer {
+        margin-bottom: 3rem;
+    }
+}
+
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+    .contentVideo img {
+        max-width: 250px;
+    }
+
+    .footerLogo {
+        margin-bottom: 2rem;
+    }
+
+    .menuFooter {
+        margin-bottom: 2rem;
+    }
+
+    .menuFooter ul li {
+        float: left;
+
+    }
+
+    .menuFooter ul li:last-child {
+        margin-bottom: 10px;
+    }
+
+    .menuFooter ul li a {
+        font-size: 1.5rem;
+    }
+
+    .newsletterFooter {
+        text-align: center;
+    }
+
+    .slide3 {
+        background-position-y: 0;
+    }
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {}
+
+/* Extra large devices (large desktops)*/
+/* No media query since the extra-large breakpoint has no upper bound on its width

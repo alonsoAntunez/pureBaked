@@ -1,0 +1,92 @@
+.loginRow {
+    background: rgba(247, 180, 0, 1);
+    margin-top: -7.59rem;
+}
+
+
+.loginContainer {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.loginImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginImage img {
+    max-width: 120px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.loginContainer button {
+    background: rgba(247, 180, 0, 1);
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.ordersRow {
+    background: rgba(247, 180, 0, 1);
+    margin-top: -7.59rem;
+}
+
+.ordersContainer {
+    padding-top: 2rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
+    max-height: 75vh;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+
+.ordersContainer table {
+    border-radius: 10px;
+    border-collapse: collapse;
+    border-radius: 1em;
+}
+
+.ordersContainer table thead tr th {
+    font-weight: 900;
+}
+
+.ordersContainer table tbody tr td {
+    font-weight: 500;
+}
+
+.ordersContainer table tbody tr td a {
+    font-weight: 500;
+}
+
+.ordersContainer table tbody tr.canceled {
+    pointer-events: none;
+}
+
+.modal .descriptionImagesTitle {
+    margin-bottom: 1rem;
+}
+
+.modal .descriptionImages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal .descriptionImages img {
+    max-width: 450px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.modal span {
+    font-size: 18px;
+}
